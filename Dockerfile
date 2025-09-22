@@ -1,5 +1,5 @@
 # Use the official MongoDB image as the base
-FROM mongo:latest
+FROM mongodb/mongodb-atlas-local:latest
 
 # Set environment variables for MongoDB
 ENV MONGO_INITDB_ROOT_USERNAME=root
