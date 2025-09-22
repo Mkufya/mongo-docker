@@ -14,7 +14,5 @@ RUN mkdir -p /data/db
 # Copy initialization script for replica set
 COPY replica-set-init.js /docker-entrypoint-initdb.d/
 
-RUN chmod 400 replica.key
-
 # Set the command to enable replica set
 CMD ["mongod", "--replSet", "rs0", "--keyFile", "replica.key", "--bind_ip_all"]
